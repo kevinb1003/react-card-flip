@@ -32,9 +32,9 @@
     "lib/**/*"
   ],
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "prop-types": "^15.7.2"
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
@@ -70,5 +70,9 @@
     "collectCoverageFrom": [
       "src/*.jsx"
     ]
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }
