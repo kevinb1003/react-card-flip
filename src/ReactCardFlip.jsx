@@ -31,7 +31,9 @@ class ReactCardFlip extends React.Component {
       flipSpeedBackToFront,
       cardStyles: { front, back },
       containerStyle,
-      cardZIndex
+      cardZIndex,
+      onMouseEnter,
+      onMouseLeave
     } = this.props;
     const { isFlipped, rotation } = this.state;
 
@@ -88,7 +90,7 @@ class ReactCardFlip extends React.Component {
     };
 
     return (
-      <div className="react-card-flip" style={{...styles.container, ...containerStyle}}>
+      <div className="react-card-flip" style={{...styles.container, ...containerStyle}} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
         <div className="react-card-flipper" style={styles.flipper}>
           <div className="react-card-front" style={styles.front}>
             {this.getComponent('front')}
@@ -142,7 +144,9 @@ ReactCardFlip.propTypes = {
   flipSpeedBackToFront: PropTypes.number,
   flipSpeedFrontToBack: PropTypes.number,
   infinite: PropTypes.bool,
-  isFlipped: PropTypes.bool
+  isFlipped: PropTypes.bool,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
 };
 
 ReactCardFlip.defaultProps = {
